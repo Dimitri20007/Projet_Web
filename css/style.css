@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    background-color: rgb(205, 205, 197);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 20px;
+    background-color: rgb(49, 108, 216);
+}
+
+header .logo img {
+    height: 60px;
+    width: 220px;
+} 
+
+nav {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000a9;
+    font-weight: bold;
+}
+
+main {
+    margin: 5px 20px;
+}
+
+footer {
+    margin-top: 30px;
+    height: 80px;
+    background-color: rgb(49, 108, 216);
+    padding: 20px;
+}
+
