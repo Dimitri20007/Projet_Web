@@ -1,0 +1,130 @@
+/* Scroll Animation */
+
+[class*="reveal-"] {
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s cubic-bezier(.5, 0, 0, 1);
+    transition: .6s;
+    margin-bottom: 10px;
+}
+
+.reveal-2 {
+    transition-delay: .1s;
+}
+
+.reveal-3 {
+    transition-delay: .2s;
+}
+
+.reveal-4 {
+    transition-delay: .3s;
+}
+
+/* section Départements */
+
+.departements {
+    display: flex;
+    justify-content: space-around;
+}
+
+.departements > div {
+    width: 20%;
+    background-color: white;
+    padding: 0px 20px 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.departement_images {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.departement_images img {
+    width: 60%;
+    height: 50%;
+}
+
+
+/* Carousel styles */
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel__container {
+    transition: transform 0.3s;
+}
+
+.carousel__container::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.carousel__item {
+    float: left;
+}
+
+.carousel__next, .carousel__prev {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 50%;
+    right: 0;
+    margin-top: -20px;
+    box-shadow: 0 15px 35px #3232321a, 0 5px 15px #0000001a;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+}
+
+.carousel__next:hover, .carousel__prev:hover {
+    transform: scale(1.2);
+}
+
+.carousel__next--hidden, .carousel__prev--hidden {
+    opacity: 0;
+}
+
+.carousel__prev {
+    right: auto;
+    left: 0px;
+}
+
+.item {
+    margin: 40px 10px;
+    background-color: #fff;
+    box-shadow: 0 15px 35px #3232321a, 0 5px 15px #0000001a;
+    transition: transform .3s;
+    transform: translate3d(0, -1px, 0);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 450px;
+}
+
+/* section Projets des étudiants */
+
+.video_sql {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.projet_etudiant video{
+    width: 500px;
+    height: 300px;
+}
