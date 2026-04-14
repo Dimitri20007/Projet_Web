@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/Register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <title>Vitrine Efrei</title>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="" alt="">
+            <img src="../img/logo_efrei.png" alt="Logo Efrei">
         </div>
         <nav>
             <a href="Accueil.html">Accueil</a>
@@ -20,7 +22,43 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="register">
+            <form>
+                <h2>Créer un compte</h2>
+                <label for="username">Nom d'utilisateur :</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">S'inscrire</button>
+            </form>
+        </section>
+        <section class="sign_in">
+            <form>
+                <h2>Se connecter</h2>
+                <label for="email_sign_in">Email :</label>
+                <input type="email" id="email_sign_in" name="email_sign_in" required>
+
+                <label for="password_sign_in">Mot de passe :</label>
+                <input type="password" id="password_sign_in" name="password_sign_in" required>
+
+                <button type="submit">Se connecter</button>
+            </form>
+        </section>
+        <section class="forgot_password">
+            <form>
+                <h2>Mot de passe oublié</h2>
+                <label for="email_forgot">Email :</label>
+                <input type="email" id="email_forgot" name="email_forgot" required>
+
+                <button type="submit">Réinitialiser le mot de passe</button>
+            </form>
+        </section>
+        <section class="info_user">
 
         </section>
     </main>
