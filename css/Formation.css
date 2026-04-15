@@ -44,16 +44,99 @@ main {
 }
 
 .card-icon {
+    position: relative;
     height: 92px;
-    border-radius: 12px;
-    background: #eef2ff;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #334155;
+    color: #ffffff;
     font-size: 0.95rem;
     letter-spacing: 0.04em;
     margin-bottom: 22px;
+    overflow: hidden;
+}
+
+.card-icon::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.7;
+}
+
+.card-icon::after {
+    content: "";
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.96;
+}
+
+.card-icon-prepa {
+    background: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.35) 0%, transparent 18%), linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+}
+
+.card-icon-prepa::after {
+    background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%);
+    box-shadow: inset 0 0 0 2px rgba(30, 58, 138, 0.25);
+}
+
+.card-icon-bigdata {
+    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.4) 0%, transparent 14%), radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.35) 0%, transparent 12%), linear-gradient(135deg, #0f172a 0%, #2563eb 100%);
+}
+
+.card-icon-bigdata::after {
+    background: radial-gradient(circle, #ffffff 0%, #dde9ff 100%);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+.card-icon-cyber {
+    background: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.4) 0%, transparent 15%), linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+}
+
+.card-icon-cyber::after {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.82) 100%);
+    box-shadow: inset 0 0 0 2px rgba(148, 163, 184, 0.4);
+}
+
+.card-icon-web {
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.35) 0%, transparent 18%), linear-gradient(135deg, #0284c7 0%, #075985 100%);
+}
+
+.card-icon-web::after {
+    background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%);
+    box-shadow: inset 0 0 0 2px rgba(2, 132, 199, 0.24);
+}
+
+.card-icon-cloud {
+    background: radial-gradient(circle at 50% 28%, rgba(255, 255, 255, 0.5) 0%, transparent 20%), linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+}
+
+.card-icon-cloud::after {
+    width: 52px;
+    height: 28px;
+    border-radius: 24px 24px 18px 18px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: inset 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+.card-icon-devops {
+    background: radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.35) 0%, transparent 14%), linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+}
+
+.card-icon-devops::after {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.82) 100%);
+    box-shadow: inset 0 0 0 2px rgba(148, 163, 184, 0.35);
 }
 
 .formation-card h2 {
