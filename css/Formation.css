@@ -331,6 +331,22 @@ main {
     background: #eef2ff;
     color: #475569;
     min-height: 180px;
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.program-details::-webkit-scrollbar {
+    width: 10px;
+}
+
+.program-details::-webkit-scrollbar-track {
+    background: rgba(229, 231, 235, 0.8);
+    border-radius: 999px;
+}
+
+.program-details::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.75);
+    border-radius: 999px;
 }
 
 .program-details p {
