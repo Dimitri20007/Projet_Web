@@ -64,116 +64,26 @@ main {
 }
 
 .card-icon-prepa {
-    background-image: linear-gradient(180deg, #0f172a 0%, #1b2563 100%),
-        radial-gradient(circle at 20% 25%, rgba(255,255,255,0.28), transparent 20%),
-        repeating-linear-gradient(0deg, transparent 0, transparent 12px, rgba(255,255,255,0.08) 12px, rgba(255,255,255,0.08) 13px);
-}
-
-.card-icon-prepa::after {
-    content: "Prépa";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: #f8fafc;
-    letter-spacing: 0.16em;
-    font-size: 0.72rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    padding: 8px 14px;
-    border-radius: 999px;
-    background: rgba(15,23,42,0.72);
+    background-image: url("https://img.freepik.com/premium-photo/young-student-studying-with-laptop_1291600-59044.jpg?w=2000");
 }
 
 .card-icon-bigdata {
-    background-image: radial-gradient(circle at 24% 18%, rgba(255,255,255,0.3), transparent 18%),
-        radial-gradient(circle at 80% 28%, rgba(255,255,255,0.18), transparent 14%),
-        linear-gradient(135deg, #041e42 0%, #164aa5 65%, #0f172a 100%);
-}
-
-.card-icon-bigdata::after {
-    content: "DATA";
-    position: absolute;
-    left: 50%;
-    top: 52%;
-    transform: translate(-50%, -50%);
-    color: #ffffff;
-    letter-spacing: 0.2em;
-    font-size: 0.75rem;
-    font-weight: 900;
-    padding: 8px 16px;
-    border-radius: 999px;
-    background: rgba(2, 132, 199, 0.85);
+    background-image: url("https://www.bluebi.com/wp-content/uploads/2023/02/big-data-per-aziende.jpg");
 }
 
 .card-icon-cyber {
-    background-image: radial-gradient(circle at 25% 35%, rgba(56,189,248,0.25), transparent 16%),
-        linear-gradient(135deg, #071b2c 0%, #0f2d5f 45%, #0b1833 100%);
-}
-
-.card-icon-cyber::after {
-    content: "";
-    position: absolute;
-    width: 44px;
-    height: 44px;
-    top: 52%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 12px;
-    background: rgba(255,255,255,0.92);
-    box-shadow: inset 0 0 0 2px rgba(14, 165, 233, 0.28);
+    background-image : url("https://img.freepik.com/premium-photo/illustration-lock-shield-symbolizing-security-privacy-digital-technology_1110958-31795.jpg")
 }
 
 .card-icon-web {
-    background-image: url("https://sunlightmedia.org/wp-content/uploads/2020/04/Why-the-Right-Text-Editor-is-Crucial-for-Web-Development.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08), inset 0 12px 0 rgba(255,255,255,0.04);
+    background-image: url("https://st.depositphotos.com/1152339/2955/i/950/depositphotos_29555161-stock-photo-web-development-concept-web-programming.jpg");
 }
-
-.card-icon-web::after {
-    content: none;
-}
-
 .card-icon-cloud {
-    background-image: linear-gradient(135deg, #0f172a 0%, #1151a7 55%, #1d4ed8 100%),
-        radial-gradient(circle at 47% 35%, rgba(255,255,255,0.45), transparent 20%),
-        radial-gradient(circle at 60% 50%, rgba(255,255,255,0.35), transparent 18%);
-}
-
-.card-icon-cloud::after {
-    content: "";
-    position: absolute;
-    width: 62px;
-    height: 32px;
-    border-radius: 50% 50% 48% 48%;
-    background: rgba(255,255,255,0.94);
-    top: 52%;
-    left: 50%;
-    transform: translate(-50%, -55%);
-    box-shadow: 0 12px 0 0 rgba(255,255,255,0.8);
+    background-image: url("https://wallpaperaccess.com/full/9556937.jpg")
 }
 
 .card-icon-devops {
-    background-image: linear-gradient(135deg, #07172d 0%, #0f2a5a 45%, #13367f 100%),
-        radial-gradient(circle at 26% 24%, rgba(255,255,255,0.25), transparent 18%),
-        radial-gradient(circle at 76% 72%, rgba(255,255,255,0.16), transparent 14%);
-}
-
-.card-icon-devops::after {
-    content: "DEV";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.18em;
-    padding: 10px 16px;
-    border-radius: 999px;
-    background: rgba(15,23,42,0.82);
+    background-image: url("https://www.hackread.com/wp-content/uploads/2023/09/devops-role-streamlining-cloud-migration-processes.jpg")
 }
 
 .formation-card h2 {
