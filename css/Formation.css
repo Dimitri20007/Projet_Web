@@ -36,6 +36,7 @@ main {
 }
 
 .formation-card {
+    position: relative;
     background: #ffffff;
     border: 1px solid #d1d5db;
     border-radius: 16px;
@@ -142,6 +143,39 @@ main {
 .details-link:hover {
     color: #0c1545;
     border-color: #0c1545;
+}
+
+.details-popup {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 88px;
+    background: #ffffff;
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    border-radius: 18px;
+    padding: 18px 20px;
+    box-shadow: 0 22px 45px rgba(15, 23, 42, 0.14);
+    color: #111827;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+    z-index: 10;
+}
+
+.details-popup strong {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #0f172a;
+}
+
+.details-link:hover + .details-popup,
+.details-popup:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .comparatif {
