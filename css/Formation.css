@@ -198,6 +198,21 @@ main {
     color: #0f172a;
 }
 
+.simulateur-intro label.field-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.72rem;
+    font-weight: 700;
+    background: #1e3a8a;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
 .simulateur-intro select {
     width: 100%;
     padding: 14px 16px;
