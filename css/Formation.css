@@ -124,7 +124,7 @@ main {
     box-shadow: inset 0 0 0 2px rgba(14, 165, 233, 0.28);
 }
 
-..card-icon-web {
+.card-icon-web {
     background-image: url("../img/web-programming-background.jpg");
     background-size: cover;
     background-position: center;
