@@ -8,50 +8,59 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
-    padding: 0 20px;
-    background: linear-gradient(135deg, #1e3a8a 0%, #3757d9 100%);
+    min-height: 88px;
+    padding: 0 32px;
+    background-color: #1e3a8a;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
 }
 
 header .logo {
-    padding: 8px 14px;
-    border-radius: 14px;
-    background-color: rgba(30, 58, 138, 0.16);
+    display: flex;
+    align-items: center;
 }
 
 header .logo img {
-    height: 56px;
+    height: 52px;
     width: auto;
-    filter: brightness(0) invert(1);
+    filter: none;
 }
 
 nav {
     display: flex;
-    width: 60%;
-    justify-content: space-around;
     align-items: center;
+    gap: 28px;
+    margin-left: auto;
 }
 
 nav a {
     text-decoration: none;
     color: #ffffff;
-    font-weight: bold;
+    font-weight: 600;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+nav a:hover {
+    color: #e8ecff;
 }
 
 nav a.register-link {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .user-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 26px;
-    height: 26px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.18);
     color: #ffffff;
     font-size: 0.95rem;
 }
