@@ -11,7 +11,8 @@ header {
     height: 80px;
     padding: 0 20px;
     background: linear-gradient(135deg, #1e3a8a 0%, #3757d9 100%);
-}
+    z-index: 1000;
+}*
 
 header .logo {
     padding: 8px 14px;

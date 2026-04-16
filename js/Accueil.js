@@ -1,7 +1,6 @@
 import Carousel from './utils/carousel.js';
 
 document.addEventListener('DOMContentLoaded', function () {
-
     new Carousel(document.querySelector('.carousel1'), {
         slideToScroll: 1,
         slideVisible: 2,
