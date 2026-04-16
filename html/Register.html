@@ -35,7 +35,8 @@
                 <label for="password">Mot de passe :</label>
                 <input type="password" id="password" name="password" required>
 
-                <button type="submit">S'inscrire</button>
+                <button type="button" id="register_button">S'inscrire</button>
+                <span class="error-message"></span>
                 <p class="sign_in_link">pas inscrit ?</p>
                 <p class="forgot_password_link">mot de passe oublié ?</p>
             </form>
@@ -49,7 +50,8 @@
                 <label for="password_sign_in">Mot de passe :</label>
                 <input type="password" id="password_sign_in" name="password_sign_in" required>
 
-                <button type="submit">Se connecter</button>
+                <button type="button" id="sign_in_button">Se connecter</button>
+                <span class="error-message"></span>
                 <p class="register_link">pas de compte ?</p>
                 <p class="forgot_password_link">mot de passe oublié ?</p>
             </form>
@@ -60,18 +62,27 @@
                 <label for="email_forgot">Email :</label>
                 <input type="email" id="email_forgot" name="email_forgot" required>
 
-                <button type="submit">Réinitialiser le mot de passe</button>
+                <button type="button" id="forgot_password_button">Réinitialiser le mot de passe</button>
+                <span class="error-message"></span>
                 <p class="sign_in_link">se connecter ?</p>
                 <p class="register_link">pas de compte ?</p>
             </form>
         </section>
         <section class="info_user">
-
+            <h2>Bienvenue Sur la Vitrine Efrei</h2>
+            <p>Découvrez nos formations, notre équipe et bien plus encore en vous inscrivant dès aujourd'hui !</p>
+            <button class="button_show_info">Cliquez ici pour voir vos informations</button>
+            <div class="info">
+                <p><strong>Nom d'utilisateur :</strong> <span id="display_username"></span></p>
+                <p><strong>Email :</strong> <span id="display_email"></span></p>
+                <button class="button_hide_info">cacher les informations</button>
+            </div>
+            <button class="button_logout">se déconnecter</button>
         </section>
     </main>
     <footer>
         <a href="Apropos.html">À propos</a>
-        <p>&copy; 2023 Vitrine Efrei. Tous droits réservés.</p>
+        <p>&copy; 2026 Vitrine Efrei. Tous droits réservés.</p>
     </footer>
 </body>
 </html>
