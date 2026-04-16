@@ -93,12 +93,22 @@ button {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-bottom: 10px;
 }
 
 /* Hover bouton */
 button:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(99,102,241,0.5);
+}
+
+.button_show_info {
+    display: none;
+}
+
+.error-message {
+    color: #f87171;
+    font-size: 0.85rem;
 }
 
 /* Responsive */
