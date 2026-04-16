@@ -72,7 +72,25 @@ main {
 footer {
     margin-top: 30px;
     height: 80px;
-    background-color: rgb(49, 108, 216);
+    background-color: #1e3a8a;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
     padding: 20px;
+    color: white;
+}
+
+.footer-columns{
+    columns: 4;
+    column-gap: 40px;
+
+}
+
+.footer-columns p {
+    margin: 20px 20px 20px;
+    break-inside: avoid; 
+}
+
+footer a{
+    color: #e8ecff;
+    font-weight: 500;
 }
 
