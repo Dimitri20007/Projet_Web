@@ -36,6 +36,7 @@ main {
 }
 
 .formation-card {
+    position: relative;
     background: #ffffff;
     border: 1px solid #d1d5db;
     border-radius: 16px;
@@ -44,16 +45,46 @@ main {
 }
 
 .card-icon {
+    position: relative;
     height: 92px;
-    border-radius: 12px;
-    background: #eef2ff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #334155;
-    font-size: 0.95rem;
-    letter-spacing: 0.04em;
+    border-radius: 18px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin-bottom: 22px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.card-icon::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.18) 0%, transparent 50%, rgba(0,0,0,0.18) 100%);
+    pointer-events: none;
+}
+
+.card-icon-prepa {
+    background-image: url("https://postsecondaryreadiness.org/wp-content/uploads/2019/05/link-roundup-image.jpg");
+}
+
+.card-icon-bigdata {
+    background-image: url("https://www.bluebi.com/wp-content/uploads/2023/02/big-data-per-aziende.jpg");
+}
+
+.card-icon-cyber {
+    background-image : url("https://img.freepik.com/premium-photo/illustration-lock-shield-symbolizing-security-privacy-digital-technology_1110958-31795.jpg")
+}
+
+.card-icon-web {
+    background-image: url("https://st.depositphotos.com/1152339/2955/i/950/depositphotos_29555161-stock-photo-web-development-concept-web-programming.jpg");
+}
+.card-icon-cloud {
+    background-image: url("https://wallpaperaccess.com/full/9556937.jpg")
+}
+
+.card-icon-devops {
+    background-image: url("https://www.hackread.com/wp-content/uploads/2023/09/devops-role-streamlining-cloud-migration-processes.jpg")
 }
 
 .formation-card h2 {
@@ -112,6 +143,39 @@ main {
 .details-link:hover {
     color: #0c1545;
     border-color: #0c1545;
+}
+
+.details-popup {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 88px;
+    background: #ffffff;
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    border-radius: 18px;
+    padding: 18px 20px;
+    box-shadow: 0 22px 45px rgba(15, 23, 42, 0.14);
+    color: #111827;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+    z-index: 10;
+}
+
+.details-popup strong {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #0f172a;
+}
+
+.details-link:hover + .details-popup,
+.details-popup:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .comparatif {
@@ -198,6 +262,21 @@ main {
     color: #0f172a;
 }
 
+.simulateur-intro label.field-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.72rem;
+    font-weight: 700;
+    background: #1e3a8a;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
 .simulateur-intro select {
     width: 100%;
     padding: 14px 16px;
@@ -252,6 +331,22 @@ main {
     background: #eef2ff;
     color: #475569;
     min-height: 180px;
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.program-details::-webkit-scrollbar {
+    width: 10px;
+}
+
+.program-details::-webkit-scrollbar-track {
+    background: rgba(229, 231, 235, 0.8);
+    border-radius: 999px;
+}
+
+.program-details::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.75);
+    border-radius: 999px;
 }
 
 .program-details p {
