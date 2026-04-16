@@ -10,13 +10,20 @@ header {
     align-items: center;
     height: 80px;
     padding: 0 20px;
-    background-color: rgb(49, 108, 216);
+    background: linear-gradient(135deg, #1e3a8a 0%, #3757d9 100%);
+}
+
+header .logo {
+    padding: 8px 14px;
+    border-radius: 14px;
+    background-color: rgba(30, 58, 138, 0.16);
 }
 
 header .logo img {
-    height: 60px;
-    width: 220px;
-} 
+    height: 56px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
 
 nav {
     display: flex;
@@ -27,8 +34,26 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #000000a9;
+    color: #ffffff;
     font-weight: bold;
+}
+
+nav a.register-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 0.95rem;
 }
 
 main {
