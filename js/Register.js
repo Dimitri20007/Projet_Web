@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+    handleCheckAuthRegisterPage();
+    const registerLink = document.querySelector('.register-link');
     
     const registerSection = document.querySelector('.register');
     const signInSection = document.querySelector('.sign_in');
@@ -34,12 +36,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const deconnectButton = infoUserSection.querySelector('.button_logout');
     if ( deconnectButton ) {
         deconnectButton.addEventListener('click', function () {
+            localStorage.setItem('connected', 'false');
             const usernameSpan = infoUserSection.querySelector('#display_username');
             const emailSpan = infoUserSection.querySelector('#display_email');
             usernameSpan.textContent = '';
             emailSpan.textContent = '';
             infoUserSection.style.display = 'none';
             signInSection.style.display = 'block';
+            registerLink.textContent = 'Register';
+            const span = document.createElement('span');
+            span.textContent = '👤';
+            registerLink.appendChild(span);
         });
     }
 
@@ -63,19 +70,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
 })
 
-const checkAuth = (signInSection, infoUserSection) => {
-    const storedUserData = JSON.parse(localStorage.getItem('userData'));
-    if(storedUserData) {
-        const info = infoUserSection.querySelector('.info');
-        info.style.display = 'block';
+const handleCheckAuthRegisterPage = () => {
+    const connected = localStorage.getItem('connected');
+    const registerLink = document.querySelector('.register-link');
+    const span = document.querySelector('.register-link span');
+    const registerSection = document.querySelector('.register');
+    const signInSection = document.querySelector('.sign_in');
+    const forgotPasswordSection = document.querySelector('.forgot_password');
+    const infoUserSection = document.querySelector('.info_user');
+
+    if(connected === 'true') {
+        registerLink.textContent = 'Mon compte';
+        span.textContent = '👤';
+        registerLink.appendChild(span);
+        registerSection.style.display = 'none';
         signInSection.style.display = 'none';
+        forgotPasswordSection.style.display = 'none';
+        infoUserSection.style.display = 'block';
+        const storedUserData = JSON.parse(localStorage.getItem('userData'));
         const usernameSpan = infoUserSection.querySelector('#display_username');
         const emailSpan = infoUserSection.querySelector('#display_email');
         usernameSpan.textContent = storedUserData.username;
         emailSpan.textContent = storedUserData.email;
-        infoUserSection.style.display = 'block';
+        const info = infoUserSection.querySelector('.info');
+        info.style.display = 'block';
+        const buttonShowInfo = infoUserSection.querySelector('.button_show_info');
+        if (buttonShowInfo) {
+            buttonShowInfo.style.display = 'none';
+        }
     } else {
+        registerLink.textContent = 'Register';
+        span.textContent = '👤';
+        registerLink.appendChild(span);
+        registerSection.style.display = 'none';
         signInSection.style.display = 'block';
+        forgotPasswordSection.style.display = 'none';
+        infoUserSection.style.display = 'none';
     }
 }
 
@@ -102,12 +132,15 @@ const handleSignIn = (signInSection, infoUserSection) => {
     const emailInput = signInSection.querySelector('#email_sign_in');
     const passwordInput = signInSection.querySelector('#password_sign_in');
     const errorMessage = signInSection.querySelector('.error-message');
+    const registerLink = document.querySelector('.register-link');
+    const buttonShowInfo = infoUserSection.querySelector('.button_show_info');
     if(!emailInput.value || !passwordInput.value) {
         errorMessage.textContent = 'Veuillez remplir tous les champs.';
         return;
     }
     const storedUserData = JSON.parse(localStorage.getItem('userData'));
     if(storedUserData && storedUserData.email === emailInput.value && storedUserData.password === passwordInput.value) {
+        localStorage.setItem('connected', 'true');
         const info = infoUserSection.querySelector('.info');
         info.style.display = 'block';
         signInSection.style.display = 'none';
@@ -116,6 +149,13 @@ const handleSignIn = (signInSection, infoUserSection) => {
         usernameSpan.textContent = storedUserData.username;
         emailSpan.textContent = storedUserData.email;
         infoUserSection.style.display = 'block';
+        registerLink.textContent = 'Mon compte';
+        const span = document.createElement('span');
+        span.textContent = '👤';
+        registerLink.appendChild(span);
+        if (buttonShowInfo) {
+            buttonShowInfo.style.display = 'none';
+        }
     } else {
         errorMessage.textContent = 'Email ou mot de passe incorrect.';
     }
@@ -126,6 +166,8 @@ const handleRegister = (registerSection, infoUserSection) => {
     const emailInput = registerSection.querySelector('#email');
     const passwordInput = registerSection.querySelector('#password');
     const errorMessage = registerSection.querySelector('.error-message');
+    const registerLink = document.querySelector('.register-link');
+    const buttonShowInfo = infoUserSection.querySelector('.button_show_info');
     if(!usernameInput.value || !emailInput.value || !passwordInput.value) {
         errorMessage.textContent = 'Veuillez remplir tous les champs.';
         return;
@@ -138,6 +180,7 @@ const handleRegister = (registerSection, infoUserSection) => {
     }
 
     localStorage.setItem('userData', JSON.stringify(userData));
+    localStorage.setItem('connected', 'true');
     const info = infoUserSection.querySelector('.info');
     info.style.display = 'block';
     registerSection.style.display = 'none';
@@ -146,6 +189,13 @@ const handleRegister = (registerSection, infoUserSection) => {
     usernameSpan.textContent = userData.username;
     emailSpan.textContent = userData.email;
     infoUserSection.style.display = 'block';
+    registerLink.textContent = 'Mon compte';
+    const span = document.createElement('span');
+    span.textContent = '👤';
+    registerLink.appendChild(span);
+    if (buttonShowInfo) {
+        buttonShowInfo.style.display = 'none';
+    }
 }
 
 const handleToggle = (registerSection, signInSection, forgotPasswordSection, infoUserSection) => {

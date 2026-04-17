@@ -1,3 +1,5 @@
+import handleAuthCheck from "./utils/auth.js";
+
 const formationSelect = document.getElementById('formation-select');
 const programTitle = document.querySelector('.program-summary h3');
 const durationText = document.querySelector('.program-summary p:nth-of-type(1)');
@@ -102,5 +104,8 @@ function updateFormationDetails() {
 }
 
 formationSelect.addEventListener('change', updateFormationDetails);
-document.addEventListener('DOMContentLoaded', updateFormationDetails);
+document.addEventListener('DOMContentLoaded', () => {
+    updateFormationDetails();
+    handleAuthCheck();
+});
 updateFormationDetails();
