@@ -25,19 +25,80 @@
     transition-delay: .3s;
 }
 
+body {
+    background: #f8fbff;
+}
+
+main {
+    background: #ffffff;
+    margin: 50px 20px;
+}
+
+section {
+    max-width: 1300px;
+    margin: 0 auto 42px;
+    padding: 34px;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 20px;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-left: 90px;
+}
+
+h2, h3, p {
+    max-width: 1180px;
+}
+
 /* section Départements */
 
 .departements {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 30px;
 }
 
 .departements > div {
-    width: 20%;
-    background-color: white;
-    padding: 0px 20px 20px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    width: 23%;
+    min-width: 240px;
+    background: #ffffff;
+    padding: 24px 20px 20px;
+    border: 1px solid #d1d5db;
+    border-radius: 16px;
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
+    transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.departements > div:hover {
+    background-color: #eef4ff;
+    border-color: #a5b4fc;
+    transform: translateY(-2px);
+}
+
+
+.departements > div h3 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 16px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: #1e3a8a;
+}
+
+.departements > div p {
+    margin: 0 0 18px;
+    color: #475569;
+    line-height: 1.75;
+    font-size: 0.95rem;
 }
 
 .departement_images {
@@ -49,6 +110,53 @@
 .departement_images img {
     width: 60%;
     height: 50%;
+}
+
+.carousel1 {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.carousel1 .item {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 16px;
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
+    transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    padding: 20px;
+    margin: 10px;
+    min-height: 280px;
+}
+
+.carousel1 .item:hover {
+    background: #eef4ff;
+    border-color: #a5b4fc;
+    transform: translateY(-2px);
+}
+
+.carousel1 .item p {
+    margin: 0 0 14px;
+    color: #475569;
+    line-height: 1.7;
+}
+
+.actualite, .projet_etudiant {
+    padding: 34px;
+}
+
+.actualite h2,
+.projet_etudiant h2 {
+    margin-top: 0;
+}
+
+.actualite p,
+.projet_etudiant p {
+    max-width: 1080px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 
