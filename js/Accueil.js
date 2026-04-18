@@ -3,6 +3,7 @@ import handleAuthCheck from "./utils/auth.js";
 
 document.addEventListener('DOMContentLoaded', function () {
     handleAuthCheck();
+
     new Carousel(document.querySelector('.carousel1'), {
         slideToScroll: 1,
         slideVisible: 2,

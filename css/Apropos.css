@@ -23,6 +23,7 @@ footer {
     object-fit: cover;
     z-index: -1;
     opacity: 1;
+    pointer-events: none;
 }
 
 .first-row-block {

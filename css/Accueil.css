@@ -5,6 +5,15 @@
     transform: translateY(-30px);
 }
 
+main {
+    padding-top: 20px;
+}
+
+.accueil-nav {
+    color: #cbd5e1;
+    opacity: 0.8;
+}
+
 .reveal-visible {
     opacity: 1;
     transform: translateY(0);
@@ -70,6 +79,7 @@ h2, h3, p {
     border-radius: 16px;
     box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
     transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    cursor: pointer;
 }
 
 .departements > div:hover {
@@ -222,6 +232,7 @@ h2, h3, p {
     flex-direction: column;
     padding: 10px;
     height: 450px;
+    cursor: pointer;
 }
 
 /* section Projets des étudiants */
@@ -235,4 +246,10 @@ h2, h3, p {
 .projet_etudiant video{
     width: 500px;
     height: 300px;
+}
+
+@media (max-width: 1300px) {
+    .departements {
+        flex-wrap: wrap;
+    }
 }
