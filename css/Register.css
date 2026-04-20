@@ -1,4 +1,4 @@
-/* Fond global */
+/* Ecran d'authentification en mode vitrine */
 
 main {
     background: linear-gradient(135deg, #0f172a, #1e293b);
@@ -23,7 +23,7 @@ main {
     display: none;
 }
 
-/* Sections (cards) */
+/* Cartes des differents etats d'authentification */
 section {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(12px);
@@ -48,14 +48,14 @@ section:hover {
     box-shadow: 0 15px 40px rgba(0,0,0,0.4);
 }
 
-/* Titres */
+/* Titres et libelles des formulaires */
 h2 {
     color: #f1f5f9;
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Labels */
+/* Champs de saisie */
 label {
     color: #cbd5f5;
     font-size: 0.9rem;
@@ -84,7 +84,7 @@ input:focus {
     background: rgba(255,255,255,0.12);
 }
 
-/* Boutons */
+/* Boutons d'action principaux */
 button {
     width: 100%;
     padding: 12px;
@@ -104,6 +104,7 @@ button:hover {
     box-shadow: 0 5px 15px rgba(99,102,241,0.5);
 }
 
+/* Etat de l'espace utilisateur connecte */
 .button_show_info {
     display: none;
 }
@@ -117,7 +118,7 @@ footer {
     margin: 0;
 }
 
-/* Responsive */
+/* Ajustement mobile */
 @media (max-width: 768px) {
     main {
         flex-direction: column;

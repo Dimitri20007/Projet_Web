@@ -1,4 +1,5 @@
 export default function handleAuthCheck() {
+    // Met a jour le lien Register selon la session conservee en local.
     const connected = localStorage.getItem('connected');
     const registerLink = document.querySelector('.register-link');
     const span = document.querySelector('.register-link span');

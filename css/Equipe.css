@@ -1,3 +1,4 @@
+/* Fond et conteneur principal de la page equipe */
 body {
     background: #f8fbff;
 }
@@ -73,6 +74,7 @@ section {
     gap: 24px;
 }
 
+/* Carte recto-verso des enseignants */
 .teacher-card {
     perspective: 1200px;
     cursor: pointer;
@@ -118,6 +120,7 @@ section {
     color: #1e3a8a;
 }
 
+/* Visuel de remplacement des photos */
 .teacher-photo {
     width: 100%;
     min-height: 220px;
@@ -171,6 +174,7 @@ section {
     margin: 0;
 }
 
+/* Bloc recherche, innovation et partenaires */
 .team-details {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
@@ -254,6 +258,7 @@ section {
     object-fit: contain;
 }
 
+/* Adaptation tablette et mobile */
 @media (max-width: 1120px) {
     .stats-grid,
     .team-grid,

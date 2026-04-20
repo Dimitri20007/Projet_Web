@@ -2,15 +2,17 @@ import Carousel from './utils/carousel.js';
 import handleAuthCheck from "./utils/auth.js";
 
 document.addEventListener('DOMContentLoaded', function () {
+    // Synchronise le lien de navigation avec l'etat de connexion.
     handleAuthCheck();
 
+    // Le carrousel est instancie une seule fois au chargement de la page.
     new Carousel(document.querySelector('.carousel1'), {
         slideToScroll: 1,
         slideVisible: 2,
         loop: true
     })
 
-    // EFFET AU SCROLL
+    // Revele les blocs au scroll pour donner du rythme a la page.
 
     const ratio = .1
     const options = {

@@ -3,6 +3,7 @@ body {
     font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
+/* Mise en page commune de l'entete */
 header {
     display: flex;
     justify-content: space-between;
@@ -74,6 +75,7 @@ main {
     margin: 5px 20px;
 }
 
+/* Pied de page commun a toutes les pages */
 footer {
     margin-top: 30px;
     height: 80px;
@@ -89,6 +91,7 @@ footer {
 
 }
 
+/* Distribution en colonnes des liens et informations du footer */
 .footer-columns{
     columns: 4;
     column-gap: 40px;

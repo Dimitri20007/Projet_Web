@@ -1,4 +1,4 @@
-/* Scroll Animation */
+/* Animation d'apparition au scroll pour les blocs de la page */
 
 [class*="reveal-"] {
     opacity: 0;
@@ -62,7 +62,7 @@ h2, h3, p {
     max-width: 1180px;
 }
 
-/* section Départements */
+/* Cartes des departements */
 
 .departements {
     display: flex;
@@ -122,6 +122,7 @@ h2, h3, p {
     height: 50%;
 }
 
+/* Cartes d'actualites affichees dans le carrousel */
 .carousel1 {
     position: relative;
     overflow: hidden;
@@ -169,8 +170,7 @@ h2, h3, p {
     margin-right: 0;
 }
 
-
-/* Carousel styles */
+/* Navigation du carrousel reutilisable */
 
 .carousel {
     position: relative;
@@ -239,7 +239,7 @@ h2, h3, p {
     height: 50px;
 }
 
-/* section Projets des étudiants */
+/* Section des projets etudiants */
 
 .video_sql {
     display: flex;

@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Restaure l'etat d'authentification et branche les actions de la page.
     handleCheckAuthRegisterPage();
     const registerLink = document.querySelector('.register-link');
     
@@ -36,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const deconnectButton = infoUserSection.querySelector('.button_logout');
     if ( deconnectButton ) {
         deconnectButton.addEventListener('click', function () {
+            // Deconnexion locale: on nettoie seulement le stockage du navigateur.
             localStorage.setItem('connected', 'false');
             const usernameSpan = infoUserSection.querySelector('#display_username');
             const emailSpan = infoUserSection.querySelector('#display_email');
@@ -50,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Affiche ou masque les informations personnelles sur demande.
     const showInfoButton = infoUserSection.querySelector('.button_show_info');
     if (showInfoButton) {
         showInfoButton.addEventListener('click', function () {
@@ -71,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 const handleCheckAuthRegisterPage = () => {
+    // Synchronise les sections visibles avec l'etat stocke localement.
     const connected = localStorage.getItem('connected');
     const registerLink = document.querySelector('.register-link');
     const span = document.querySelector('.register-link span');
@@ -110,6 +114,7 @@ const handleCheckAuthRegisterPage = () => {
 }
 
 const handleForgotPassword = (forgotPasswordSection, signInSection) => {
+    // Validation minimale avant de mettre a jour le mot de passe local.
     const emailInput = forgotPasswordSection.querySelector('#email_forgot');
     const passwordInput = forgotPasswordSection.querySelector('#password_forgot');
     const errorMessage = forgotPasswordSection.querySelector('.error-message');
@@ -129,6 +134,7 @@ const handleForgotPassword = (forgotPasswordSection, signInSection) => {
 }
 
 const handleSignIn = (signInSection, infoUserSection) => {
+    // Connexion cote client pour la maquette de vitrine.
     const emailInput = signInSection.querySelector('#email_sign_in');
     const passwordInput = signInSection.querySelector('#password_sign_in');
     const errorMessage = signInSection.querySelector('.error-message');
@@ -162,6 +168,7 @@ const handleSignIn = (signInSection, infoUserSection) => {
 }
 
 const handleRegister = (registerSection, infoUserSection) => {
+    // Inscription stockee dans localStorage pour simuler un compte.
     const usernameInput = registerSection.querySelector('#username');
     const emailInput = registerSection.querySelector('#email');
     const passwordInput = registerSection.querySelector('#password');
@@ -172,7 +179,7 @@ const handleRegister = (registerSection, infoUserSection) => {
         errorMessage.textContent = 'Veuillez remplir tous les champs.';
         return;
     }
-    // Simulation de l'inscription réussie
+    // Simulation de l'inscription reussie.
     const userData = {
         username: usernameInput.value,
         email: emailInput.value,
@@ -199,7 +206,7 @@ const handleRegister = (registerSection, infoUserSection) => {
 }
 
 const handleToggle = (registerSection, signInSection, forgotPasswordSection, infoUserSection) => {
-
+    // Les liens textuels basculent entre les etats du formulaire.
     const signInLinks = document.querySelectorAll('.sign_in_link');
     const registerLinks = document.querySelectorAll('.register_link');
     const forgotPasswordLinks = document.querySelectorAll('.forgot_password_link');

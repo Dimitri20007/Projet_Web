@@ -1,5 +1,6 @@
 import handleAuthCheck from "./utils/auth.js";
 
+// Donnees declaratives: tout le contenu affiche est pilote depuis cet objet.
 const formationSelect = document.getElementById('formation-select');
 const programTitle = document.querySelector('.program-summary h3');
 const durationText = document.querySelector('.program-summary p:nth-of-type(1)');
@@ -90,6 +91,7 @@ const formationData = {
 };
 
 function updateFormationDetails() {
+    // Met a jour la vue a partir de la formation selectionnee.
     const selection = formationSelect.value;
     const data = formationData[selection];
     if (!data) {
@@ -105,6 +107,7 @@ function updateFormationDetails() {
 
 formationSelect.addEventListener('change', updateFormationDetails);
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialise la page avec la valeur par defaut du select.
     updateFormationDetails();
     handleAuthCheck();
 });

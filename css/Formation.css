@@ -1,3 +1,4 @@
+/* Fond de page et zone principale de la page formations */
 body {
     background: #f8fbff;
 }
@@ -30,6 +31,7 @@ main {
     line-height: 1.7;
 }
 
+/* Grille des cartes de formation */
 .formations-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -96,6 +98,7 @@ main {
     background-image: url("https://www.hackread.com/wp-content/uploads/2023/09/devops-role-streamlining-cloud-migration-processes.jpg")
 }
 
+/* Contenu des cartes et etiquette de niveau */
 .formation-card h2 {
     margin: 0 0 16px;
     font-size: 1.26rem;
@@ -187,6 +190,7 @@ main {
     transform: translateY(0);
 }
 
+/* Comparatif des formations */
 .comparatif {
     max-width: 1180px;
     margin: 56px auto;
@@ -236,6 +240,7 @@ main {
     background: #f8fafc;
 }
 
+/* Simulateur de parcours interactif */
 .simulateur {
     max-width: 1180px;
     margin: 56px auto 84px;
