@@ -231,8 +231,12 @@ h2, h3, p {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    height: 450px;
+    height: 500px;
     cursor: pointer;
+}
+
+.item h3 {
+    height: 50px;
 }
 
 /* section Projets des étudiants */
