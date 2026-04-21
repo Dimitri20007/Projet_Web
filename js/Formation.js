@@ -1,14 +1,33 @@
 import handleAuthCheck from "./utils/auth.js";
 
-// Donnees declaratives: tout le contenu affiche est pilote depuis cet objet.
-const formationSelect = document.getElementById('formation-select');
-const programTitle = document.querySelector('.program-summary h3');
-const durationText = document.querySelector('.program-summary p:nth-of-type(1)');
-const levelText = document.querySelector('.program-summary p:nth-of-type(2)');
-const summaryText = document.querySelector('.program-summary p:nth-of-type(3)');
-const programDetails = document.querySelector('.program-details');
+document.addEventListener('DOMContentLoaded', function () {
+    // Garde l'etat du menu synchronise avec la connexion.
+    handleAuthCheck();
 
-const formationData = {
+    // Les cartes se retournent au clic et au clavier pour rester accessibles.
+    const formationCards = document.querySelectorAll('.formation-card');
+    formationCards.forEach((card) => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('is-flipped');
+        });
+
+        card.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                card.classList.toggle('is-flipped');
+            }
+        });
+    });
+
+    // Donnees declaratives: tout le contenu affiche est pilote depuis cet objet.
+    const formationSelect = document.getElementById('formation-select');
+    const programTitle = document.querySelector('.program-summary h3');
+    const durationText = document.querySelector('.program-summary p:nth-of-type(1)');
+    const levelText = document.querySelector('.program-summary p:nth-of-type(2)');
+    const summaryText = document.querySelector('.program-summary p:nth-of-type(3)');
+    const programDetails = document.querySelector('.program-details');
+
+    const formationData = {
     'Master Spécialisé - DevOps': {
         title: 'Master Spécialisé - DevOps',
         duration: '1 an',
@@ -105,10 +124,7 @@ function updateFormationDetails() {
     programDetails.innerHTML = data.details;
 }
 
-formationSelect.addEventListener('change', updateFormationDetails);
-document.addEventListener('DOMContentLoaded', () => {
+    formationSelect.addEventListener('change', updateFormationDetails);
     // Initialise la page avec la valeur par defaut du select.
     updateFormationDetails();
-    handleAuthCheck();
 });
-updateFormationDetails();

@@ -39,20 +39,60 @@ main {
 }
 
 .formation-card {
+    perspective: 1200px;
+    cursor: pointer;
+    height: 100%;
+}
+
+.card-inner {
     position: relative;
+    width: 100%;
+    min-height: 350px;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+.formation-card.is-flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    inset: 0;
     background: #ffffff;
     border: 1px solid #d1d5db;
     border-radius: 16px;
-    padding: 28px;
     box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
-    transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
-    cursor: pointer;
+    backface-visibility: hidden;
+    padding: 28px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-.formation-card:hover {
-    background-color: #eef4ff;
+.card-front:hover,
+.card-back:hover {
     border-color: #a5b4fc;
-    transform: translateY(-3px);
+    background-color: #eef4ff;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background: #e2e8f0;
+    color: #1e3a8a;
+}
+
+.card-back .bio-text {
+    margin-top: 16px;
+    color: #475569;
+    line-height: 1.6;
+    font-size: 0.82rem;
+}
+
+.card-back .bio-text p {
+    margin: 0;
 }
 
 .card-icon {
