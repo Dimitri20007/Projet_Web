@@ -132,6 +132,23 @@ section {
     color: #94a3b8;
     font-weight: 700;
     margin-bottom: 18px;
+    overflow: hidden;
+}
+
+.teacher-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.teacher-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .teacher-card h2 {
@@ -285,3 +302,5 @@ section {
         grid-template-columns: 1fr;
     }
 }
+
+
