@@ -41,3 +41,5 @@ Le projet peut être ouvert directement dans un navigateur via un serveur local 
 1. Ouvrir le dossier du projet dans VS Code.
 2. Lancer la page HTML de ton choix, par exemple `html/Accueil.html`, avec Live Server ou un serveur local équivalent.
 3. Naviguer entre les pages pour tester les interactions JavaScript.
+
+## Et tant donné la taille de la vidéo sql_pddd.mp4(elle dure 10 minutes), cette vidéo ne sera pas mis dans le rendu
