@@ -245,6 +245,38 @@
                 </div>
             </div>
         </section>
+
+        <section class="chatbot-section">
+            <div class="chatbot-card">
+                <div class="chatbot-header">
+                    <div>
+                        <span class="chatbot-kicker">OpenRouter API</span>
+                        <h2>Assistant formations et questions techniques</h2>
+                    </div>
+                    <p>Posez une question sur les formations Efrei ou sur un sujet technique. Le chatbot peut répondre sur les parcours, les prérequis, le web, la cybersécurité, le cloud ou l’IA.</p>
+                </div>
+
+                <div class="chatbot-quick-questions" aria-label="Questions rapides">
+                    <button type="button" class="chatbot-chip">Quelle formation choisir pour faire du web ?</button>
+                    <button type="button" class="chatbot-chip">Différence entre DevOps et Cloud ?</button>
+                    <button type="button" class="chatbot-chip">Qu'est-ce que l'IA générative ?</button>
+                    <button type="button" class="chatbot-chip">Quels sont les prérequis en cybersécurité ?</button>
+                </div>
+
+                <div class="chatbot-window">
+                    <div class="chatbot-messages" id="chatbot-messages" aria-live="polite" aria-label="Conversation avec le chatbot"></div>
+
+                    <form class="chatbot-form" id="chatbot-form">
+                        <label class="chatbot-label" for="chatbot-input">Votre message</label>
+                        <textarea id="chatbot-input" rows="3" placeholder="Exemple : Quelle formation correspond le mieux à un profil débutant en développement web ?"></textarea>
+                        <div class="chatbot-actions">
+                            <p class="chatbot-note">Réponse générée côté navigateur via une IA gratuite qui est Open Router.</p>
+                            <button type="submit" class="chatbot-submit">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- Pied de page commun -->
     <footer>
