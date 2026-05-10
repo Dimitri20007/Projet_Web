@@ -23,14 +23,14 @@ Site vitrine réalisé dans le cadre d’un projet web étudiant. Le site prése
 
 ## Structure du projet
 
-```text
 README.md
 css/
 html/
 img/
 js/
 video/
-```
+
+séparations des fichiers css et js selon leurs utilités
 
 Les scripts sont organisés par page, avec quelques utilitaires partagés dans `js/utils/`.
 
