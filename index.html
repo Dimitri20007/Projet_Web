@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestionnaire de Tâches</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📋 Gestionnaire de Tâches</h1>
+    <p class="subtitle">Organisez vos tâches facilement</p>
+  </header>
+
+  <main>
+    <!-- Formulaire d'ajout -->
+    <section class="add-task">
+      <h2>Ajouter une tâche</h2>
+      <form id="task-form">
+        <div class="form-group">
+          <input
+            type="text"
+            id="task-input"
+            placeholder="Entrez une nouvelle tâche…"
+            maxlength="100"
+            required
+          />
+          <select id="priority-select">
+            <option value="low">Faible</option>
+            <option value="medium" selected>Moyenne</option>
+            <option value="high">Haute</option>
+          </select>
+          <button type="submit" id="add-btn">Ajouter</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Filtres et statistiques -->
+    <section class="controls">
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Toutes</button>
+        <button class="filter-btn" data-filter="pending">En cours</button>
+        <button class="filter-btn" data-filter="completed">Terminées</button>
+      </div>
+      <div class="stats">
+        <span id="stats-text">0 tâche(s)</span>
+        <button id="clear-completed" title="Supprimer les tâches terminées">
+          Effacer terminées
+        </button>
+      </div>
+    </section>
+
+    <!-- Liste des tâches -->
+    <section class="task-list-section">
+      <ul id="task-list">
+        <!-- Les tâches sont injectées par JavaScript -->
+      </ul>
+      <p id="empty-message" class="empty-message">Aucune tâche à afficher.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projet Web – Partie 2 &copy; 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

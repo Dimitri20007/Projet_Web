@@ -1,0 +1,319 @@
+/* =============================================
+   Gestionnaire de Tâches – Feuille de style
+   Projet Web – Partie 2
+   ============================================= */
+
+/* ---------- Variables et reset ---------- */
+:root {
+  --color-bg: #f0f4f8;
+  --color-surface: #ffffff;
+  --color-primary: #4f46e5;
+  --color-primary-dark: #3730a3;
+  --color-success: #16a34a;
+  --color-danger: #dc2626;
+  --color-text: #1e293b;
+  --color-muted: #64748b;
+  --color-border: #e2e8f0;
+  --radius: 10px;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --transition: 0.2s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Header ---------- */
+header {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: #fff;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+}
+
+header .subtitle {
+  margin-top: 0.4rem;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+/* ---------- Main ---------- */
+main {
+  flex: 1;
+  max-width: 720px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ---------- Section – Ajouter une tâche ---------- */
+.add-task {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.add-task h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--color-muted);
+}
+
+.form-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.form-group input[type="text"] {
+  flex: 1 1 200px;
+  padding: 0.6rem 0.9rem;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  transition: border-color var(--transition);
+  outline: none;
+}
+
+.form-group input[type="text"]:focus {
+  border-color: var(--color-primary);
+}
+
+.form-group select {
+  padding: 0.6rem 0.7rem;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+.form-group select:focus {
+  border-color: var(--color-primary);
+}
+
+.form-group button[type="submit"] {
+  padding: 0.6rem 1.2rem;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.form-group button[type="submit"]:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+/* ---------- Section – Contrôles ---------- */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.filters {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.filter-btn {
+  padding: 0.45rem 1rem;
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  color: var(--color-muted);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+#clear-completed {
+  padding: 0.4rem 0.85rem;
+  background: transparent;
+  border: 2px solid var(--color-danger);
+  color: var(--color-danger);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+#clear-completed:hover {
+  background: var(--color-danger);
+  color: #fff;
+}
+
+/* ---------- Section – Liste des tâches ---------- */
+.task-list-section {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+#task-list {
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.2rem;
+  border-bottom: 1px solid var(--color-border);
+  transition: background var(--transition), opacity var(--transition);
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.task-item:hover {
+  background: #f8fafc;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: var(--color-muted);
+}
+
+.task-item.completed {
+  opacity: 0.65;
+}
+
+/* Indicateur de priorité */
+.priority-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.priority-dot.low    { background: #22c55e; }
+.priority-dot.medium { background: #f59e0b; }
+.priority-dot.high   { background: #ef4444; }
+
+/* Checkbox */
+.task-check {
+  width: 1.15rem;
+  height: 1.15rem;
+  cursor: pointer;
+  accent-color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 0.95rem;
+  word-break: break-word;
+}
+
+.task-meta {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--color-muted);
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  transition: color var(--transition), background var(--transition);
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  color: var(--color-danger);
+  background: #fee2e2;
+}
+
+/* ---------- Message vide ---------- */
+.empty-message {
+  text-align: center;
+  padding: 2rem;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  display: none;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-item {
+    flex-wrap: wrap;
+  }
+
+  .task-meta {
+    flex-basis: 100%;
+    text-align: right;
+  }
+}
